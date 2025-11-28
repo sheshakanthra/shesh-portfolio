@@ -1,38 +1,57 @@
 "use client";
 
 import { motion } from "framer-motion";
-import SectionTitle from "./SectionTitle";
 
 export default function About() {
   return (
-    <section>
-      <SectionTitle index="04.">About me</SectionTitle>
-      <motion.div
-        className="grid gap-8 md:grid-cols-[3fr,2fr]"
-        initial={{ opacity: 0, y: 20 }}
+    <section
+      id="about"
+      className="max-w-5xl mx-auto px-6 py-32 text-gray-300"
+    >
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-emerald-400 font-mono mb-3"
       >
-        <p className="text-sm leading-relaxed text-slate-400 sm:text-base">
-          I&apos;m Sheshakanth, a frontend developer who loves crafting
-          high-quality web experiences with a mix of clean UI and subtle
-          cinematic motion. I enjoy working with React, Next.js, TypeScript and
-          Tailwind CSS to turn ideas into polished, responsive interfaces.
-          <br />
-          <br />
-          I care about details: typography, spacing, micro-interactions and
-          performance. Right now I&apos;m focused on building real-world
-          projects like e-commerce experiences and modern portfolios while
-          sharpening my skills every day.
+        04. About Me
+      </motion.p>
+
+      <motion.h2
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="text-4xl sm:text-5xl font-bold text-gray-100 mb-10"
+      >
+        Who I Am Behind the Code
+      </motion.h2>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="space-y-6 leading-relaxed text-lg text-gray-400"
+      >
+        <p>
+          Hey, I'm Sheshakanth — a passionate frontend developer who loves
+          building visually immersive, responsive, and clean web experiences.
+          I focus on blending beautiful UI with solid engineering.
         </p>
-        <div className="flex items-center justify-center">
-          <div className="relative h-40 w-40 overflow-hidden rounded-3xl border border-emerald-500/40 bg-gradient-to-br from-emerald-500/20 to-slate-900 shadow-lg shadow-emerald-500/30">
-            {/* Replace this with <Image /> and your actual photo later */}
-            <span className="absolute inset-0 flex items-center justify-center text-xs text-slate-300/80">
-              Your photo here
-            </span>
-          </div>
-        </div>
+
+        <p>
+          I’m currently diving deep into modern web technologies like{" "}
+          <span className="text-emerald-400 font-semibold">React</span>,{" "}
+          <span className="text-emerald-400 font-semibold">Next.js</span>, and{" "}
+          <span className="text-emerald-400 font-semibold">Tailwind CSS</span>.
+          I love crafting UIs that feel alive and interactive.
+        </p>
+
+        <p>
+          Outside of coding, I enjoy gaming, exploring new tech, hitting the gym,
+          and constantly improving my skills to become a world-class developer.
+        </p>
       </motion.div>
     </section>
   );
